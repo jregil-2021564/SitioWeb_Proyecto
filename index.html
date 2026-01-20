@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portal Personal | SitioWeb</title>
+    <link rel="stylesheet" href="../CSS/estilos-principal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="/IMG/LogoKinal.png" type="image/png">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="video-fondo">
+            <video autoplay muted loop id="video-bg">
+                <source src="/IMG/video.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+            <div class="overlay-video"></div>
+        </div>
+        
+        <header class="encabezado">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Mi Sitio Personal</span>
+            </div>
+
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="../HTML/index.html" class="activo">Inicio</a></li>
+                    <li><a href="../HTML/fotografia.html">Fotografía</a></li>
+                    <li><a href="../HTML/biografia.html">Biografía</a></li>
+                    <li><a href="../HTML/Re-DiseñoKinal.html">Rediseño Kinal</a></li>
+                </ul>
+            </nav>
+            <button class="menu-movil">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+
+        <main class="contenido-principal">
+            <div class="texto-bienvenida">
+                <h1 class="titulo animacion-titulo">Bienvenido a mi Portal Personal</h1>
+                <p class="subtitulo animacion-subtitulo">En mi sitio te vas a encontrar con cosas que me gustan, mi biografia y un re diseño de una Pagina Web</p>
+            </div>
+            
+            <div class="contenedor-libro">
+                <div class="libro animacion-libro">
+                    <div class="portada-libro">
+                        <div class="titulo-libro">Mi Historia</div>
+                        <div class="autor-libro">por Joab Regil</div>
+                        <div class="decoracion-libro">
+                            <i class="fas fa-gamepad"></i>
+                            <i class="fas fa-graduation-cap"></i>
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                    <a href="../HTML/fotografia.html" class="boton-libro">
+                        <span class="texto-boton">Abrir Mi Libro</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="instrucciones">
+                    <p>Haz clic en el libro para comenzar el viaje</p>
+                    <div class="flecha-animada">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tarjetas-enlaces">
+                <div class="tarjeta animacion-tarjeta">
+                    <div class="icono-tarjeta">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Mi Pasión</h3>
+                    <p>Descubre mi interés por los videojuegos y cuales son mis favoritos.</p>
+                    <a href="../HTML/fotografia.html" class="enlace-tarjeta">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="tarjeta animacion-tarjeta">
+                    <div class="icono-tarjeta">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Mi Biografía</h3>
+                    <p>Conoce más sobre mí, mis estudios y expectativas para este año académico.</p>
+                    <a href="../HTML/biografia.html" class="enlace-tarjeta">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="tarjeta animacion-tarjeta">
+                    <div class="icono-tarjeta">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Rediseño Kinal</h3>
+                    <p>Conoce mi Re-Diseño que hice sobre una Pagina Web la de https://www.kinal.org.gt</p>
+                    <a href="../HTML/Re-DiseñoKinal.html" class="enlace-tarjeta">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="pie-pagina">
+            <p>&copy; 2026 Mi Portal Personal. Todos los derechos reservados.</p>
+            <div class="redes-sociales">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
