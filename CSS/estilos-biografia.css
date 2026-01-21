@@ -310,7 +310,6 @@ body {
     color: #666;
 }
 
-/* Tarjetas de expectativas */
 .tarjetas-expectativas {
     display: flex;
     justify-content: center;
@@ -331,13 +330,13 @@ body {
 
 .tarjeta-expectativa:hover {
     transform: translateY(-10px);
-    border-color: #64ffda;
-    box-shadow: 0 15px 40px rgba(100, 255, 218, 0.1);
+    border-color: #a58a10;
+    box-shadow: 0 15px 40px rgba(171, 197, 21, 0.1);
 }
 
 .icono-expectativa {
     font-size: 3rem;
-    color: #64ffda;
+    color: #a58a10;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -345,7 +344,7 @@ body {
 .tarjeta-expectativa h3 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    color: #64ffda;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -355,7 +354,7 @@ body {
 }
 
 .tarjeta-expectativa strong {
-    color: #64ffda;
+    color: #db994d;
 }
 
 .lista-horas, .lista-habilidades {
@@ -371,13 +370,12 @@ body {
 
 .lista-horas li:before, .lista-habilidades li:before {
     content: "✓";
-    color: #64ffda;
+    color: #db994d;
     position: absolute;
     left: 0;
     font-weight: bold;
 }
 
-/* Proyectos */
 .contenedor-proyectos {
     max-width: 1000px;
     margin: 0 auto;
@@ -401,14 +399,14 @@ body {
 }
 
 .icono-proyecto {
-    background-color: rgba(100, 255, 218, 0.1);
+    background-color: #082446;
     width: 70px;
     height: 70px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #64ffda;
+    color: #a58a10;
     font-size: 2rem;
     flex-shrink: 0;
 }
@@ -427,14 +425,13 @@ body {
 .badge {
     display: inline-block;
     padding: 0.4rem 1rem;
-    background-color: rgba(100, 255, 218, 0.1);
-    color: #64ffda;
+    background-color: #db994d;
+    color: #0a192f;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
 }
 
-/* Motivación */
 .contenedor-motivacion {
     display: flex;
     align-items: center;
@@ -450,7 +447,7 @@ body {
 .contenido-motivacion h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #64ffda;
+    color: #db994d;
 }
 
 .imagen-motivacion {
@@ -465,12 +462,12 @@ body {
     padding: 3rem;
     max-width: 400px;
     text-align: center;
-    border-left: 5px solid #64ffda;
+    border-left: 5px solid #a58a10;
 }
 
 .cita-inspiradora i {
     font-size: 2.5rem;
-    color: #64ffda;
+    color: #db994d;
     margin-bottom: 1.5rem;
 }
 
@@ -486,7 +483,6 @@ body {
     font-weight: 500;
 }
 
-/* Pie de página */
 .pie-pagina {
     background-color: #0a192f;
     padding: 2rem 5%;
@@ -512,11 +508,10 @@ body {
 }
 
 .redes-sociales a:hover {
-    color: #64ffda;
+    color: #db994d;
     transform: translateY(-5px);
 }
 
-/* Responsive */
 @media (max-width: 992px) {
     .hero {
         flex-direction: column;
