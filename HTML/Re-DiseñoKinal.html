@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundación Kinal | Educación Técnica Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../IMG/LogoKinal.png" type="image/png">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo-link">
+                <div class="logo-placeholder">
+                    <img src="../IMG/imagen.png" alt="Logo Fundación Kinal" class="nav-logo-img">
+                </div>
+            </a>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../HTML/videojuegos.html">VideoJuegos</a></li>
+                <li><a href="../HTML/biografia.html">Mi Biografía</a></li>
+                <li><a href="#quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#antiguos-alumnos">Antiguos Alumnos</a></li>
+                <li><a href="#bolsa-empleo">Bolsa de Empleo</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero-video-container" id="inicio">
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="../IMG/WALC 2019.mp4" type="video/mp4">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-group-of-students-studying-together-44447-large.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        
+        <div class="video-overlay">
+            <div class="hero-content">
+                <img src="../IMG/imagen.png" alt="Escudo Kinal" class="floating-logo-hero">
+            </div>
+        </div>
+        <div class="wave-shape"></div>
+    </section>
+
+    <main class="main-content">
+        <div class="slogan-container">
+            <img src="../IMG/imagen2.avif" alt="El trabajo bien hecho" class="slogan-badge-img">
+        </div>
+
+        <section class="intro">
+            <h2>TU CAMINO AL ÉXITO ESTÁ EN KINAL</h2>
+            <p class="summary">
+                Kinal es un Centro Educativo privado, no lucrativo, dirigido a la formación técnica profesional de jóvenes y adultos, de beneficio colectivo y asistencia social en favor de los sectores más necesitados de la comunidad.
+
+Nuestro valor fundamental es enseñar a realizar el trabajo bien hecho, que sea la base de la superación de alumnos y el medio para servir a los demás.
+            </p>
+        </section>
+
+        <section class="programs-section" id="educacion">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">NUESTROS PROGRAMAS</h2>
+                    <div class="title-divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-dot"></div>
+                        <div class="divider-line"></div>
+                    </div>
+                    <p class="section-subtitle">Formación técnica especializada para todas las edades</p>
+                </div>
+                
+                <div class="programs-grid">
+                    <div class="program-card program-card-red animate-on-scroll">
+                        <div class="program-image">
+                            <img src="https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Ciclo Básico">
+                            <div class="program-overlay"></div>
+                            <div class="program-tag">CICLO BÁSICO</div>
+                        </div>
+                        <div class="program-content">
+                            <div class="program-age">11-13 AÑOS</div>
+                            <h3 class="program-title">Educación Secundaria Inicial</h3>
+                            <p class="program-description">Orientación técnica y excelencia académica para los más jóvenes. Formación integral con enfoque en valores.</p>
+                            <div class="program-features">
+                                <span><i class="fas fa-check-circle"></i> Formación básica técnica</span>
+                                <span><i class="fas fa-check-circle"></i> Desarrollo de valores</span>
+                                <span><i class="fas fa-check-circle"></i> Orientación vocacional</span>
+                            </div>
+                            <button class="program-btn">CONOCE MÁS</button>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card program-card-blue animate-on-scroll">
+                        <div class="program-image">
+                            <img src="https://images.pexels.com/photos/256455/pexels-photo-256455.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Diversificado">
+                            <div class="program-overlay"></div>
+                            <div class="program-tag">DIVERSIFICADO</div>
+                        </div>
+                        <div class="program-content">
+                            <div class="program-age">15-18 AÑOS</div>
+                            <h3 class="program-title">Educación Diversificada</h3>
+                            <p class="program-description">Preparación técnica y académica para el mundo laboral y universidad. Especialización en áreas técnicas.</p>
+                            <div class="program-features">
+                                <span><i class="fas fa-check-circle"></i> Especializaciones técnicas</span>
+                                <span><i class="fas fa-check-circle"></i> Preparación universitaria</span>
+                                <span><i class="fas fa-check-circle"></i> Prácticas profesionales</span>
+                            </div>
+                            <button class="program-btn">CONOCE MÁS</button>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card program-card-gold animate-on-scroll">
+                        <div class="program-image">
+                            <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Escuela Técnica">
+                            <div class="program-overlay"></div>
+                            <div class="program-tag">ESCUELA TÉCNICA</div>
+                        </div>
+                        <div class="program-content">
+                            <div class="program-age">ADULTOS</div>
+                            <h3 class="program-title">Formación para Adultos</h3>
+                            <p class="program-description">Más de 50 especialidades para potenciar tu crecimiento profesional. Cursos diseñados para el mercado laboral.</p>
+                            <div class="program-features">
+                                <span><i class="fas fa-check-circle"></i> 50+ especialidades</span>
+                                <span><i class="fas fa-check-circle"></i> Horarios flexibles</span>
+                                <span><i class="fas fa-check-circle"></i> Certificación oficial</span>
+                            </div>
+                            <button class="program-btn">CONOCE MÁS</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section" id="estadisticas">
+            <div class="stats-bg-pattern"></div>
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title white-title">JÓVENES BENEFICIADOS (2024)</h2>
+                    <div class="title-divider">
+                        <div class="divider-line white-line"></div>
+                        <div class="divider-dot"></div>
+                        <div class="divider-line white-line"></div>
+                    </div>
+                    <p class="section-subtitle white-subtitle">Transformando vidas a través de la educación técnica</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-circle">
+                            <div class="stat-number" data-count="25K">0</div>
+                        </div>
+                        <div class="stat-label">ESCUELA TÉCNICA</div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 78%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-circle">
+                            <div class="stat-number" data-count="1500">0</div>
+                        </div>
+                        <div class="stat-label">CICLO BÁSICO</div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 47%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card animate-on-scroll">
+                        <div class="stat-circle">
+                            <div class="stat-number" data-count="6">0</div>
+                        </div>
+                        <div class="stat-label">DIVERSIFICADO</div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 19%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card stat-card-total animate-on-scroll">
+                        <div class="stat-circle">
+                            <div class="stat-number" data-count="32K">0</div>
+                            <div class="stat-plus">+</div>
+                        </div>
+                        <div class="stat-label">TOTAL BENEFICIADOS</div>
+                        <div class="stat-bar">
+                            <div class="stat-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="galeria">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">GALERÍA DE FOTOS</h2>
+                    <div class="title-divider">
+                        <div class="divider-line"></div>
+                        <div class="divider-dot"></div>
+                        <div class="divider-line"></div>
+                    </div>
+                    <p class="section-subtitle">Vive la experiencia Kinal a través de nuestras imágenes</p>
+                </div>
+                
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="talleres">Talleres</button>
+                    <button class="filter-btn" data-filter="estudiantes">Estudiantes</button>
+                    <button class="filter-btn" data-filter="eventos">Eventos</button>
+                    <button class="filter-btn" data-filter="instalaciones">Instalaciones</button>
+                </div>
+                
+                <div class="gallery-collage">
+                    <div class="gallery-item talleres animate-on-scroll" data-category="talleres">
+                        <img src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Talleres">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Talleres Especializados</h3>
+                                <p>Equipo moderno para formación práctica</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item estudiantes animate-on-scroll" data-category="estudiantes">
+                        <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Estudiantes">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Aprendizaje Práctico</h3>
+                                <p>Desarrollo de habilidades técnicas</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item instalaciones animate-on-scroll" data-category="instalaciones">
+                        <img src="https://images.pexels.com/photos/4145354/pexels-photo-4145354.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Instalaciones">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Instalaciones Modernas</h3>
+                                <p>Ambientes diseñados para el aprendizaje</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item eventos animate-on-scroll" data-category="eventos">
+                        <img src="https://images.pexels.com/photos/3768126/pexels-photo-3768126.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Eventos">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Eventos Estudiantiles</h3>
+                                <p>Comunidad educativa activa</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item talleres animate-on-scroll" data-category="talleres">
+                        <img src="https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tecnología">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Tecnología Educativa</h3>
+                                <p>Herramientas digitales para el aprendizaje</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item estudiantes animate-on-scroll" data-category="estudiantes">
+                        <img src="https://images.pexels.com/photos/3769720/pexels-photo-3769720.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Grupo estudio">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Trabajo en Equipo</h3>
+                                <p>Colaboración y desarrollo grupal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item estudiantes animate-on-scroll" data-category="estudiantes">
+                        <img src="https://images.pexels.com/photos/3769720/pexels-photo-3769720.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Grupo estudio">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Trabajo en Equipo</h3>
+                                <p>Colaboración y desarrollo grupal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item estudiantes animate-on-scroll" data-category="estudiantes">
+                        <img src="https://images.pexels.com/photos/3769720/pexels-photo-3769720.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Grupo estudio">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Trabajo en Equipo</h3>
+                                <p>Colaboración y desarrollo grupal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="gallery-cta">
+                    <button class="gallery-view-all">
+                        <i class="fas fa-images"></i>
+                        Ver galería completa
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    <footer class="footer-redesign">
+        <div class="footer-logo-section">
+            <div class="footer-logo-container">
+                </div>
+            </div>
+        </div>
+
+        <div class="explanation-section">
+            <div class="container">
+                <h2 class="explanation-title animate-text">
+                    <span class="title-word">¿POR</span>
+                    <span class="title-word">QUÉ</span>
+                    <span class="title-word">ESTE</span>
+                    <span class="title-word">REDISEÑO</span>
+                    <span class="title-word">ES</span>
+                    <span class="title-word gold">MEJOR?</span>
+                </h2>
+                
+                <div class="explanation-grid">
+                    <div class="explanation-card animate-card">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Más Atractivo Visual</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Diseño moderno y actualizado</li>
+                            <li><i class="fas fa-check"></i> Animaciones y transiciones fluidas</li>
+                            <li><i class="fas fa-check"></i> Mejor jerarquía visual</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="explanation-card animate-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>Mejor Experiencia</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Navegación más intuitiva</li>
+                            <li><i class="fas fa-check"></i> Carga más rápida</li>
+                            <li><i class="fas fa-check"></i> Totalmente responsivo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="explanation-card animate-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Mayor Conversión</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Llamadas a la acción claras</li>
+                            <li><i class="fas fa-check"></i> Contenido mejor organizado</li>
+                            <li><i class="fas fa-check"></i> SEO optimizado</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="comparison-section">
+                    <div class="comparison-item">
+                        <div class="comparison-label">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Diseño Original</span>
+                        </div>
+                        <div class="comparison-bar">
+                            <div class="bar-fill old-design" data-width="60"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-item">
+                        <div class="comparison-label">
+                            <i class="fas fa-palette"></i>
+                            <span>Rediseño Propuesto</span>
+                        </div>
+                        <div class="comparison-bar">
+                            <div class="bar-fill new-design" data-width="95"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="conclusion animate-fade">
+                    <p class="conclusion-text">
+                        <i class="fas fa-quote-left"></i>
+                        Este rediseño representa una <strong>evolución significativa</strong> que no solo mejora 
+                        la apariencia visual, sino que optimiza la funcionalidad, usabilidad y capacidad 
+                        de conversión del sitio, manteniendo siempre la esencia de Fundación Kinal.
+                        <i class="fas fa-quote-right"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2026 Fundación Kinal | Rediseño Joab Regil</p>
+        </div>
+    </footer>
+
+    <a href="" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button class="scroll-top-btn" id="scrollTopBtn">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="../JS/diseño.js"></script>
+</body>
+</html>
