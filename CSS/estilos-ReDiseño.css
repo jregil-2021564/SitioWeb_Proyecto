@@ -103,7 +103,6 @@ body {
     color: var(--white) !important;
 }
 
-/* Hero con Video */
 .hero-video-container {
     position: relative;
     height: 100vh;
@@ -176,7 +175,6 @@ body {
     margin-right: auto;
 }
 
-/* Forma curva inferior */
 .wave-shape {
     position: absolute;
     bottom: -1px;
@@ -186,13 +184,11 @@ body {
     clip-path: ellipse(80% 100% at 50% 100%);
 }
 
-/* Main Content */
 .main-content {
     padding: 60px 0;
     background: var(--white);
 }
 
-/* Sello/Badge */
 .slogan-container {
     width: 100%;
     display: flex;
@@ -218,7 +214,6 @@ body {
     transform: scale(1.05) rotate(5deg);
 }
 
-/* Sección Introducción */
 .intro {
     text-align: center;
     max-width: 800px;
@@ -239,7 +234,6 @@ body {
     line-height: 1.8;
 }
 
-/* Grid de Programas */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -299,7 +293,6 @@ body {
 .tag.gold { background: var(--gold); }
 
 :root {
-    /* Paleta de colores Kinal */
     --primary-blue: #003366;
     --secondary-blue: #00509E;
     --light-blue: #E6F0FF;
@@ -313,32 +306,27 @@ body {
     --light-gray: #F5F5F5;
     --white: #FFFFFF;
     --black: #000000;
-    
-    /* Colores adicionales */
+
     --success: #28A745;
     --warning: #FFC107;
     --info: #17A2B8;
-    
-    /* Sombras */
+
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
     --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.25);
-    
-    /* Transiciones */
+
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
     --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    
-    /* Bordes */
+
     --radius-sm: 8px;
     --radius-md: 12px;
     --radius-lg: 20px;
     --radius-xl: 30px;
     --radius-circle: 50%;
-    
-    /* Espaciado */
+
     --space-xs: 8px;
     --space-sm: 16px;
     --space-md: 32px;
@@ -346,8 +334,6 @@ body {
     --space-xl: 128px;
 }
 
-
-/* Reset y estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -372,7 +358,6 @@ body {
     padding: 0 var(--space-sm);
 }
 
-/* Hero Section Mejorado */
 .hero-video-container {
     position: relative;
     height: 100vh;
@@ -660,7 +645,6 @@ body {
     z-index: 2;
 }
 
-/* Sello El Trabajo Bien Hecho */
 .slogan-container {
     position: relative;
     z-index: 10;
@@ -738,7 +722,6 @@ body {
     50% { opacity: 0.8; transform: scale(1.1); }
 }
 
-/* Secciones generales */
 .section-header {
     text-align: center;
     margin-bottom: var(--space-xl);
@@ -811,7 +794,6 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Sección Introducción */
 .intro-section {
     padding: var(--space-xl) 0;
     background: var(--white);
@@ -921,7 +903,6 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Sección Programas */
 .programs-section {
     padding: var(--space-xl) 0;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
@@ -1122,7 +1103,6 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-/* Sección Estadísticas */
 .stats-section {
     padding: var(--space-xl) 0;
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
@@ -1252,7 +1232,6 @@ body {
     transform: scaleX(1);
 }
 
-/* Galería de Fotos Animada */
 .gallery-section {
     padding: var(--space-xl) 0;
     background: var(--white);
@@ -1576,7 +1555,6 @@ body {
     gap: 12px;
 }
 
-/* Footer */
 .site-footer {
     background: var(--dark);
     color: var(--white);
@@ -1759,7 +1737,6 @@ body {
     color: var(--gold);
 }
 
-/* Elementos flotantes */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
@@ -1823,7 +1800,6 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
     .container {
         max-width: 1000px;
@@ -2042,7 +2018,6 @@ body {
     }
 }
 
-/* Animaciones para scroll */
 @keyframes fadeInUp {
     from {
         opacity: 0;
