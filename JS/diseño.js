@@ -535,3 +535,265 @@ function initThemeToggle() {
             themeToggle.style.background = 'var(--primary-blue)';
         }
     });
+
+    const darkModeCSS = `
+        .dark-mode {
+            background: #121212;
+            color: #e0e0e0;
+        }
+        
+        .dark-mode .navbar {
+            background: #1e1e1e;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .dark-mode .logo-main {
+            color: var(--gold);
+        }
+        
+        .dark-mode .nav-link {
+            color: #e0e0e0;
+        }
+        
+        .dark-mode .intro-section,
+        .dark-mode .programs-section,
+        .dark-mode .gallery-section,
+        .dark-mode .blog-section,
+        .dark-mode .alumni-section {
+            background: #1e1e1e;
+        }
+        
+        .dark-mode .section-title {
+            color: var(--gold);
+        }
+        
+        .dark-mode .intro-card,
+        .dark-mode .program-card,
+        .dark-mode .blog-card {
+            background: #2d2d2d;
+            color: #e0e0e0;
+        }
+        
+        .dark-mode .intro-card p,
+        .dark-mode .program-description,
+        .dark-mode .blog-excerpt {
+            color: #b0b0b0;
+        }
+        
+        .dark-mode .site-footer {
+            background: #0a0a0a;
+        }
+    `;
+    
+    const style = document.createElement('style');
+    style.textContent = darkModeCSS;
+    document.head.appendChild(style);
+}
+
+// Descomentar para activar toggle de tema
+// initThemeToggle();
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        nav.style.background = 'rgba(0, 51, 102, 0.95)';
+        nav.style.padding = '15px 5%';
+        nav.style.backdropFilter = 'blur(10px)';
+    } else {
+        nav.style.background = 'transparent';
+        nav.style.padding = '20px 5%';
+        nav.style.backdropFilter = 'none';
+    }
+});
+
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        menuToggle.innerHTML = navLinks.classList.contains('active') 
+            ? '<i class="fas fa-times"></i>' 
+            : '<i class="fas fa-bars"></i>';
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+    });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.program-card, .stat-item, .gallery-item, .blog-post, .testimonial, .donate-option').forEach(el => {
+    observer.observe(el);
+});
+
+function animateCounter(element, target, duration) {
+    let start = 0;
+    const increment = target / (duration / 16); 
+    const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+            element.textContent = target.toLocaleString();
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(start).toLocaleString();
+        }
+    }, 16);
+}
+
+const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumber = entry.target.querySelector('.stat-number');
+            if (statNumber && !statNumber.classList.contains('animated')) {
+                const target = parseInt(statNumber.textContent.replace('+', '').replace('k', '000'));
+                animateCounter(statNumber, target, 1500);
+                statNumber.classList.add('animated');
+            }
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-item').forEach(el => {
+    statObserver.observe(el);
+});
+
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Formulario enviado (simulación)');
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Sitio de Fundación Kinal cargado correctamente');
+
+    const video = document.querySelector('.bg-video');
+    if (video) {
+        video.play().catch(error => {
+            console.log('Autoplay bloqueado, intentando reproducción con mute');
+            video.muted = true;
+            video.play();
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.explanation-card');
+    cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.2}s`;
+        setTimeout(() => {
+            card.classList.add('animated');
+        }, 300 + (index * 200));
+    });
+
+    const bars = document.querySelectorAll('.bar-fill');
+    bars.forEach((bar, index) => {
+        setTimeout(() => {
+            const width = bar.getAttribute('data-width') + '%';
+            bar.style.width = width;
+        }, 1000 + (index * 300));
+    });
+
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const logoSection = document.querySelector('.footer-logo-section');
+        if (logoSection) {
+            logoSection.style.transform = `translateY(${scrolled * 0.05}px)`;
+        }
+    });
+
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    const animatedElements = document.querySelectorAll('.explanation-card, .comparison-section, .conclusion');
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    const titleWords = document.querySelectorAll('.title-word');
+    titleWords.forEach((word, index) => {
+        setTimeout(() => {
+            word.style.animation = 'wordAppear 0.5s forwards';
+        }, index * 100);
+    });
+
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            this.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
+
+    setTimeout(() => {
+        document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+        setTimeout(() => {
+            document.body.style.background = 'var(--light-bg)';
+            document.body.style.transition = 'background 1s ease';
+        }, 500);
+    }, 500);
+});
+
+setTimeout(() => {
+    document.querySelectorAll('.animate-card').forEach(card => {
+        card.classList.add('visible');
+    });
+}, 500);
+
+setTimeout(() => {
+    document.querySelector('.animate-fade').classList.add('visible');
+}, 1200);
