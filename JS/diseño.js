@@ -355,3 +355,183 @@ function initScrollToTop() {
         });
     }
 }
+
+function initWhatsAppButton() {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.2) rotate(10deg)';
+        });
+        
+        whatsappBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1) rotate(0deg)';
+        });
+    }
+}
+
+function initProgramCards() {
+    const programCards = document.querySelectorAll('.program-card');
+    
+    programCards.forEach(card => {
+        const btn = card.querySelector('.program-btn');
+        
+        if (btn) {
+            btn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                
+                setTimeout(() => {
+                    this.style.transform = '';
+
+                    const programTitle = card.querySelector('.program-title').textContent;
+                    console.log(`Abriendo más información sobre: ${programTitle}`);
+
+                    alert(`Más información sobre: ${programTitle}`);
+                }, 200);
+            });
+        }
+
+        card.addEventListener('mouseenter', function() {
+            const overlay = this.querySelector('.program-overlay');
+            if (overlay) {
+                overlay.style.background = 'linear-gradient(to bottom, transparent 30%, rgba(0,0,0,0.8) 100%)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            const overlay = this.querySelector('.program-overlay');
+            if (overlay) {
+                overlay.style.background = 'linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.7) 100%)';
+            }
+        });
+    });
+}
+
+function initDonateCards() {
+    const donateCards = document.querySelectorAll('.donate-card');
+    
+    donateCards.forEach(card => {
+        const btn = card.querySelector('.donate-btn');
+        
+        if (btn) {
+            btn.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                
+                setTimeout(() => {
+                    this.style.transform = '';
+
+                    const donateTitle = card.querySelector('.donate-title').textContent;
+                    console.log(`Iniciando proceso de donación para: ${donateTitle}`);
+
+                    alert(`Redirigiendo al proceso de donación: ${donateTitle}`);
+                }, 200);
+            });
+        }
+    });
+}
+
+window.addEventListener('scroll', function() {
+    const hero = document.querySelector('.hero-video-container');
+    const scrollPosition = window.scrollY;
+    
+    if (hero && scrollPosition < hero.offsetHeight) {
+        const parallaxValue = scrollPosition * 0.5;
+        hero.style.transform = `translateY(${parallaxValue}px)`;
+    }
+});
+
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        const preloader = document.querySelector('.preloader');
+        if (preloader) {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }
+    }, 500);
+});
+
+function playClickSound() {
+    const clickSound = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3');
+    clickSound.volume = 0.3;
+    clickSound.play().catch(e => console.log('Error playing sound:', e));
+}
+
+document.addEventListener('click', function(e) {
+    if (e.target.matches('.program-btn, .donate-btn, .action-btn, .btn-hero')) {
+        playClickSound();
+    }
+});
+
+function initTypewriter() {
+    const heroTitle = document.querySelector('.hero-title');
+    if (!heroTitle) return;
+    
+    const lines = heroTitle.querySelectorAll('.hero-line');
+    let lineIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeWriter() {
+        const currentLine = lines[lineIndex];
+        const text = currentLine.textContent;
+        
+        if (!isDeleting && charIndex <= text.length) {
+            currentLine.textContent = text.substring(0, charIndex);
+            charIndex++;
+            setTimeout(typeWriter, 100);
+        } else if (isDeleting && charIndex >= 0) {
+            currentLine.textContent = text.substring(0, charIndex);
+            charIndex--;
+            setTimeout(typeWriter, 50);
+        } else {
+            isDeleting = !isDeleting;
+            if (!isDeleting) {
+                lineIndex = (lineIndex + 1) % lines.length;
+            }
+            setTimeout(typeWriter, 500);
+        }
+    }
+    
+    // Comentar/descomentar para activar/desactivar
+    //setTimeout(typeWriter, 1000);
+}
+
+//initTypewriter();
+
+function initThemeToggle() {
+    const themeToggle = document.createElement('button');
+    themeToggle.id = 'themeToggle';
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    themeToggle.style.position = 'fixed';
+    themeToggle.style.bottom = '30px';
+    themeToggle.style.left = '30px';
+    themeToggle.style.zIndex = '1000';
+    themeToggle.style.background = 'var(--primary-blue)';
+    themeToggle.style.color = 'white';
+    themeToggle.style.border = 'none';
+    themeToggle.style.borderRadius = '50%';
+    themeToggle.style.width = '50px';
+    themeToggle.style.height = '50px';
+    themeToggle.style.cursor = 'pointer';
+    themeToggle.style.boxShadow = 'var(--shadow-md)';
+    themeToggle.style.display = 'flex';
+    themeToggle.style.alignItems = 'center';
+    themeToggle.style.justifyContent = 'center';
+    themeToggle.style.fontSize = '20px';
+    themeToggle.style.transition = 'var(--transition-normal)';
+    
+    document.body.appendChild(themeToggle);
+    
+    themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        
+        if (document.body.classList.contains('dark-mode')) {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            themeToggle.style.background = 'var(--gold)';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            themeToggle.style.background = 'var(--primary-blue)';
+        }
+    });
