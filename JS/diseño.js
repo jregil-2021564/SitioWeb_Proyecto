@@ -590,7 +590,6 @@ function initThemeToggle() {
     document.head.appendChild(style);
 }
 
-// Descomentar para activar toggle de tema
 // initThemeToggle();
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('.navbar');
